@@ -44,8 +44,8 @@ const Header: React.FC = () => (
       justifyContent: "space-between",
     }}
   >
-    <HomeLink />
-    <NavLinks navLinks={NAVLINKS} />
+    {/* <HomeLink />
+    <NavLinks navLinks={NAVLINKS} /> */}
   </header>
 )
 

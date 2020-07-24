@@ -9,7 +9,7 @@
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { AnimatePresence, motion } from "framer-motion"
 import Header from "./Header"
 import Footer from "./Footer"
 import "./layout.css"
@@ -37,9 +37,27 @@ const Layout = ({ children }) => {
         justifyContent: "center",
       }}
     >
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main css={{ flex: "1 0 auto" }}>{children}</main>
-      <Footer css={{ flexShrink: 0 }} />
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <main
+            css={{
+              flex: "1 0 auto",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "flex-start",
+            }}
+          >
+            {children}
+          </main>
+          <Footer css={{ flexShrink: 0 }} />
+        </motion.div>
+      </AnimatePresence>
     </div>
   )
 }
