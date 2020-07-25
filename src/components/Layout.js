@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header siteTitle={data.site.siteMetadata.title || "ivraj.me"} />
           <main
             css={{
               flex: "1 0 auto",
