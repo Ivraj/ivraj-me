@@ -4,6 +4,7 @@ import { jsx } from "@emotion/core"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import resume from "../assets/resume.pdf"
 
 const SocialLink = props => (
   <h3 css={{ marginRight: 16 }}>
@@ -17,10 +18,7 @@ const SocialLinks = () => (
   <div css={{ display: "flex", flexDirection: "row" }}>
     <SocialLink to="https://www.linkedin.com/in/ivraj/" text="LinkedIn" />
     <SocialLink to="https://github.com/ivraj" text="Github" />
-    <SocialLink
-      to="https://drive.google.com/file/d/1TNmygoPm3Z5Ej1CehS-A78LQt2xDKMC4/view"
-      text="Resume"
-    />
+    <SocialLink to={resume} text="Resume" />
   </div>
 )
 

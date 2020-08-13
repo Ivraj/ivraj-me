@@ -8,13 +8,14 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+    // TODO: Replace once we need images.
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images`,
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -26,7 +27,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
+        icon: `src/assets/favicon.png`,
       },
     },
     {
