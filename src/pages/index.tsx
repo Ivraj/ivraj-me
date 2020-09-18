@@ -18,6 +18,7 @@ const SocialLinks = () => (
   <div css={{ display: "flex", flexDirection: "row" }}>
     <SocialLink to="https://www.linkedin.com/in/ivraj/" text="LinkedIn" />
     <SocialLink to="https://github.com/ivraj" text="Github" />
+    <SocialLink to="https://profile.joinchanl.me/Zo6ljm4z3bdrKRcvFj9lvDU0WrI3" text="Chanl" />
     <SocialLink to={resume} text="Resume" />
   </div>
 )
@@ -29,8 +30,8 @@ const IndexPage: React.FC = () => (
       <h1>Ivraj Seerha</h1>
       <h2>Hi. How's it been?</h2>
       <h3>
-        I'm a 2019 Venture for America Fellow and am currently working as
-        Director of Engineering at Bellwethr.
+        I'm a 2019 Venture for America Fellow and am currently working on
+        some personal projects.
       </h3>
       <SocialLinks />
     </div>
