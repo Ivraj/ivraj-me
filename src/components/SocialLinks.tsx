@@ -3,45 +3,21 @@ import React from "react"
 import { jsx, css } from "@emotion/core"
 import resume from "../assets/resume.pdf"
 
-interface SocialLinkProps {
-  to: string
-  text: string
-}
-
-const SocialLink: React.FC<SocialLinkProps> = props => (
-  <h3 css={{ marginRight: 16 }}>
-    <a target="_blank" rel="noopener noreferrer" href={props.to}>
-      {props.text}
-    </a>
-  </h3>
-)
+import { ListHeader, ListLink, ListWrapper } from "./List"
 
 const SocialLinks: React.FC = () => (
-  <div
-    css={{
-      display: "flex",
-      flexDirection: "row",
-      "@media(max-width: 420px)": {
-        flexDirection: "column",
-        h3: {
-          marginTop: ".5rem",
-          marginBottom: ".5rem",
-        },
-      },
-    }}
-  >
-    <SocialLink to="https://www.linkedin.com/in/ivraj/" text="LinkedIn" />
-    <SocialLink to="https://github.com/ivraj" text="Github" />
-    <SocialLink to={resume} text="Resume" />
-    <SocialLink
-      to="https://profile.joinchanl.me/Zo6ljm4z3bdrKRcvFj9lvDU0WrI3"
-      text="Chanl"
-    />
-    <SocialLink
-      to="https://www.are.na/ivraj-seerha"
-      text="Are.na"
-    />
-  </div>
+  <React.Fragment>
+    <ListHeader text="Some links if you're here to vet me:" />
+    <ListWrapper>
+      <ListLink
+        to="https://www.linkedin.com/in/ivraj/"
+        text="LinkedIn"
+        newTab
+      />
+      <ListLink to="https://github.com/ivraj" text="Github" newTab />
+      <ListLink to={resume} text="Resume" newTab />
+    </ListWrapper>
+  </React.Fragment>
 )
 
 export default SocialLinks

@@ -4,6 +4,7 @@ import { Global, css } from "@emotion/core"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import SocialLinks from "../components/SocialLinks"
+import ThoughtLinks from "../components/ThoughtsLinks"
 
 const CenterIndexContent = () => (
   <Global
@@ -14,6 +15,17 @@ const CenterIndexContent = () => (
     `}
   />
 )
+
+interface BioLinkProps {
+  to: string
+}
+
+const BioLink: React.FC<BioLinkProps> = props => (
+  <a target="_blank" rel="noopener noreferrer" href={props.to}>
+    {props.children}
+  </a>
+)
+
 const IndexPage: React.FC = () => (
   <Layout>
     <CenterIndexContent />
@@ -22,10 +34,19 @@ const IndexPage: React.FC = () => (
       <h1>Ivraj Seerha</h1>
       <h2>Hi. How's it been?</h2>
       <h3>
-        I'm a 2019 <a target="_blank" rel="noopener noreferrer" href="https://ventureforamerica.org/">Venture for America</a> Fellow.<br/>
-        I help with community at the <a target="_blank" rel="noopener noreferrer" href="https://zeitgeist.fm/">Zeitgeist Broadcasting Collective</a>.<br/>
-        I'm a Product Engineer at <a target="_blank" rel="noopener noreferrer" href="https://airr.io">Airr</a>.
+        I'm a 2019{" "}
+        <BioLink to="https://ventureforamerica.org/">
+          Venture for America
+        </BioLink>{" "}
+        Fellow.
+        <br />I help with community at the{" "}
+        <BioLink to="https://zeitgeist.fm/">
+          Zeitgeist Broadcasting Collective
+        </BioLink>
+        .<br />
+        I'm a Product Engineer at <BioLink to="https://airr.io">Airr</BioLink>.
       </h3>
+      <ThoughtLinks />
       <SocialLinks />
     </div>
   </Layout>
