@@ -22,8 +22,9 @@ const IndexPage: React.FC = () => (
       <h1>Ivraj Seerha</h1>
       <h2>Hi. How's it been?</h2>
       <h3>
-        I'm a 2019 Venture for America Fellow and am currently working on some
-        personal projects.
+        I'm a 2019 <a target="_blank" rel="noopener noreferrer" href="https://ventureforamerica.org/">Venture for America</a> Fellow.<br/>
+        I help with community at the <a target="_blank" rel="noopener noreferrer" href="https://zeitgeist.fm/">Zeitgeist Broadcasting Collective</a>.<br/>
+        I'm a Product Engineer at <a target="_blank" rel="noopener noreferrer" href="https://airr.io">Airr</a>.
       </h3>
       <SocialLinks />
     </div>

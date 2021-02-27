@@ -37,6 +37,10 @@ const SocialLinks: React.FC = () => (
       to="https://profile.joinchanl.me/Zo6ljm4z3bdrKRcvFj9lvDU0WrI3"
       text="Chanl"
     />
+    <SocialLink
+      to="https://www.are.na/ivraj-seerha"
+      text="Are.na"
+    />
   </div>
 )
 
