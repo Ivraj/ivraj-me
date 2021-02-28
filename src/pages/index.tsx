@@ -5,6 +5,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import SocialLinks from "../components/SocialLinks"
 import ThoughtLinks from "../components/ThoughtsLinks"
+import PersonalDescriptors from "../components/PersonalDescriptors"
 
 const CenterIndexContent = () => (
   <Global
@@ -16,16 +17,6 @@ const CenterIndexContent = () => (
   />
 )
 
-interface BioLinkProps {
-  to: string
-}
-
-const BioLink: React.FC<BioLinkProps> = props => (
-  <a target="_blank" rel="noopener noreferrer" href={props.to}>
-    {props.children}
-  </a>
-)
-
 const IndexPage: React.FC = () => (
   <Layout>
     <CenterIndexContent />
@@ -33,19 +24,7 @@ const IndexPage: React.FC = () => (
     <div>
       <h1>Ivraj Seerha</h1>
       <h2>Hi. How's it been?</h2>
-      <h3>
-        I'm a 2019{" "}
-        <BioLink to="https://ventureforamerica.org/">
-          Venture for America
-        </BioLink>{" "}
-        Fellow.
-        <br />I help with community at the{" "}
-        <BioLink to="https://zeitgeist.fm/">
-          Zeitgeist Broadcasting Collective
-        </BioLink>
-        .<br />
-        I'm a Product Engineer at <BioLink to="https://airr.io">Airr</BioLink>.
-      </h3>
+      <PersonalDescriptors />
       <ThoughtLinks />
       <SocialLinks />
     </div>
