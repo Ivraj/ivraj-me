@@ -34,7 +34,9 @@ const Layout = ({ children }) => {
         padding: `0 1.0875rem 1.45rem`,
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        "@media(min-width: 420px)": {
+          justifyContent: "center",
+        },
       }}
     >
       <AnimatePresence>
