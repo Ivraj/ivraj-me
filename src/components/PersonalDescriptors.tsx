@@ -4,7 +4,7 @@ import { jsx } from "@emotion/core"
 import { ListHeader, ListWrapper } from "./List"
 
 const timeLinks = [
-  "https://www.youtube.com/watch?v=Kdq_eAqQor0&ab_channel=BADBADNOTGOOD-Topic",
+  // "https://www.youtube.com/watch?v=Kdq_eAqQor0&ab_channel=BADBADNOTGOOD-Topic",
   "https://www.youtube.com/watch?v=nfdEdE96En0&ab_channel=RoyKelly",
   "https://www.youtube.com/watch?v=YbgnlkJPga4&ab_channel=Kurzgesagt%E2%80%93InaNutshell",
   "https://www.youtube.com/watch?v=h6fcK_fRYaI&ab_channel=Kurzgesagt%E2%80%93InaNutshell",
